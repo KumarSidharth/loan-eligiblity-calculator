@@ -1,0 +1,30 @@
+@import '../../colors';
+:host {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 6.5% 0 6.5%;
+}
+
+img {
+    width: 123px;
+    height: 123px;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-self: end;
+    a {
+        margin: 0 25px;
+        color: $black;
+        &:hover {
+            color: $deepPurple;
+        }
+    }
+    .button-group {
+        margin-left: 35px;
+        display: flex;
+        gap: 24px;
+    }
+}
