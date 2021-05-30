@@ -3,6 +3,22 @@
 body {
     margin: 0;
     background-color: $offWhite;
+    height: 100vh;
+    background: url('./assets/img/circle.png') no-repeat,
+                url('./assets/img/blob-small.png') no-repeat,
+                url('./assets/img/accounting_dots.png') no-repeat,
+                url('./assets/img/accounting_dots@2x.png') no-repeat,
+                url('./assets/img/collect_img-video.png') no-repeat;
+    background-size: 60% auto, 
+                    25% auto,
+                    430px 70px,
+                    430px 70px,
+                    34% auto;
+    background-position: right -25% top 70%,
+                        -10% 213px,
+                        right 30px top 936px,
+                        462px 796px,
+                        7% 370px;
 }
 
 a {
@@ -15,6 +31,7 @@ button {
     border-width: 2px;
     border-style: solid;
     padding: 13px 36px;
+    cursor: pointer;
     &.cta {
         background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
         color: $white;
