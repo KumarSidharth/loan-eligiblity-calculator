@@ -1,0 +1,74 @@
+@import "../colors";
+
+main {
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+
+.page1 {
+    display: flex;
+}
+
+.super-simple-title {
+    color: $black;
+    font-size: 40px;
+    font-family: Montserrat-Medium;
+}
+
+.line {
+    background: $pitchBlack;
+    height: 8px;
+    width: 65%;
+    border-radius: 13px;
+    margin-top: 5px;
+}
+
+form {
+    height: 675px;
+}
+
+.page2 {
+    margin-top: 130px;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+}
+
+.col1 {
+    display: grid;
+    row-gap: 60px;
+}
+
+.col2 {
+    display: flex;
+    row-gap: 60px;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+}
+
+.right {
+    margin-right: 10vw;
+    position: relative;
+    top: 300px;
+    .line {
+        margin-top: 50px;
+        margin-bottom: 33px;
+    }
+    button {
+        margin-top: 100px;
+    }
+}
+
+.body2 {
+    font-family: Montserrat-Regular;
+    size: 18px;
+    color: #777777;
+}

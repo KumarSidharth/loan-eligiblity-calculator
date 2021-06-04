@@ -8,17 +8,20 @@ body {
                 url('./assets/img/blob-small.png') no-repeat,
                 url('./assets/img/accounting_dots.png') no-repeat,
                 url('./assets/img/accounting_dots@2x.png') no-repeat,
-                url('./assets/img/collect_img-video.png') no-repeat;
-    background-size: 60% auto, 
-                    25% auto,
+                url('./assets/img/collect_img-video.png') no-repeat,
+                url('./assets/img/sol_wave_bg.png') no-repeat;
+    background-size: 60vw auto, 
+                    25vw auto,
                     430px 70px,
                     430px 70px,
-                    34% auto;
-    background-position: right -25% top 70%,
-                        -10% 213px,
-                        right 30px top 936px,
-                        462px 796px,
-                        7% 370px;
+                    34vw auto,
+                    100vw auto;
+    background-position: right -10vw top -15vh,
+                        -8vw 25vh,
+                        right 30px top 105vh,
+                        24vw 77vh,
+                        7vw 45vh,
+                        0 120vh;
 }
 
 a {
@@ -45,6 +48,7 @@ button {
         box-shadow: 0px 0px 20px $grey;
         border-color: $deepPurple;
         color: $deepPurple;
+        background: transparent;
         &:hover {
             color: $white;
             background: $deepPurple;
