@@ -1,6 +1,4 @@
-<header>
-  <app-header></app-header>
-</header>
+<app-header></app-header>
 
 <main>
   <div class="page1">
@@ -14,10 +12,69 @@
       <div class="line"></div>
     </div>
     <div class="calculator">
-      <form>
-  
-      </form>
-      <div class="result"></div>
+      <mat-card>
+        <h4>
+          Eligiblity Calculator
+        </h4>
+        <form>
+          
+          <app-slider [min]="100000"
+                      [max]="300000"
+                      [value]="income"
+                      label="Monthly Income"
+                      [currency]="currency"
+                      (valueChanged)="income = $event || 0; calculate()">
+          </app-slider>
+          <app-slider [min]="0"
+                      [max]="300000"
+                      [value]="expense"
+                      label="Monthly Expense"
+                      [currency]="currency"
+                      (valueChanged)="expense = $event || 0; calculate()">
+          </app-slider>
+          <div class="padding-x-8">
+            <mat-form-field>
+              <mat-label>Repayment Tenure</mat-label>
+              <mat-select [(value)]="month"
+                          (selectionChange)="calculate()">
+                <mat-option *ngFor="let m of months"
+                            [value]="m">
+                  {{m}} Months
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-slide-toggle (toggleChange)="hasExistingLoans = !hasExistingLoans; calculate()"
+                              [checked] = "hasExistingLoans"
+                              labelPosition="before"
+                              color="primary">
+              Do you have any existing loans?
+            </mat-slide-toggle>
+            
+            <mat-form-field>
+              <mat-label>EMI of existing loans</mat-label>
+              <input type="number"
+                    matInput
+                    [(ngModel)]="existingLoanEMI"
+                    (ngModelChange)="calculate()"
+                    [disabled]="!hasExistingLoans"
+                    name="existingLoanEMI"/>
+            </mat-form-field>
+          </div>
+    
+        </form>
+      </mat-card>
+      <div class="result">
+        <div>
+          <label>Loan Amount</label>
+          <div class="value">{{currency + loanAmount}}</div>
+        </div>
+        <div>
+          <label>Your EMI will be</label>
+          <div class="value">{{currency + emi}}</div>
+        </div>
+        <button class="cta">Get Money</button>
+      </div>
     </div>
   </div>
   <div class="page2">

@@ -3,7 +3,6 @@
 body {
     margin: 0;
     background-color: $offWhite;
-    height: 100vh;
     background: url('./assets/img/circle.png') no-repeat,
                 url('./assets/img/blob-small.png') no-repeat,
                 url('./assets/img/accounting_dots.png') no-repeat,
@@ -18,7 +17,7 @@ body {
                     100vw auto;
     background-position: right -10vw top -15vh,
                         -8vw 25vh,
-                        right 30px top 105vh,
+                        right 30px top 78vh,
                         24vw 77vh,
                         7vw 45vh,
                         0 120vh;
@@ -56,3 +55,6 @@ button {
     }
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

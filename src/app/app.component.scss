@@ -7,7 +7,19 @@ main {
 
 .page1 {
     display: flex;
+    justify-content: space-between;
+    margin-right: 6vw;
+
+    h4 {
+        margin: -16px -16px 0 -16px;
+        padding: 10px;
+        text-align: center;
+        font-weight: normal;
+        background: #f4f4f8;
+    }
 }
+
+
 
 .super-simple-title {
     color: $black;
@@ -24,7 +36,72 @@ main {
 }
 
 form {
-    height: 675px;
+    background: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 350px;
+}
+
+.padding-x-8 {
+    padding-left: 8px;
+    padding-right: 8px;
+    * {
+        width: 100%;
+    }
+}
+
+:host ::ng-deep {
+    .mat-form-field {
+        margin-top: 10px;
+    }
+
+    .mat-slide-toggle {
+        margin-bottom: 10px;
+    }
+
+    .mat-slide-toggle-label {
+        justify-content: space-between;
+    }
+
+    .mat-slide-toggle-content {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .mat-form-field-infix {
+        width: auto;
+    }
+}
+
+.calculator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.result {
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0 10px 10px 0;
+    padding: 30px 15px;
+    background: transparent linear-gradient(180deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    label {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        text-align: center;
+        display: block;
+    }
+    .value {
+        color: white;
+        text-align: center;
+    }
+
+    .cta {
+        background: white;
+        color: $deepPurple;
+    }
 }
 
 .page2 {

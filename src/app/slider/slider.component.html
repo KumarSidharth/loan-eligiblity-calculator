@@ -1,0 +1,18 @@
+<div class="input-group">
+    <div class="helperText">
+        <label>{{label}}</label>
+        <div class="value">{{currency + value}}</div>
+    </div>
+    
+    <mat-slider [min]="min"
+                [max]="max"
+                step="1"
+                [value]="value"
+                color="primary"
+                (change)="valueChanged.emit($event.value || 0)">
+    </mat-slider>
+    <div class="subText" *ngIf="showSubText">
+        <div class="min">{{ currency + min}}</div>
+        <div class="max">{{ currency + max}}</div>
+    </div>
+</div>
